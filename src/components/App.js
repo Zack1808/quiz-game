@@ -1,12 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Importing the costume made components
 import Header from './Header';
 import Footer from './Footer';
+import HomePage from './HomePage';
+import QuizPage from './QuizPage';
+import ResultPage from './ResultPage';
 
 // Importing the styling 
 import '../css/App.css';
-import { BrowserRouter } from 'react-router-dom';
 
 // Creating the App component
 const App = () => {
@@ -14,6 +17,11 @@ const App = () => {
         <BrowserRouter>
             <div className="container" style={{backgroundImage: "url(./ques1.png"}}> 
                 <Header title="Quiz Game" />
+                <Routes>
+                    <Route path="/" exact element={<HomePage />} />
+                    <Route path="/quiz" exact element={<QuizPage />} />
+                    <Route path="/result" exact element={<ResultPage />} />
+                </Routes>
             </div>
             <Footer />
         </BrowserRouter>
