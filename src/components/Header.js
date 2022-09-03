@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import '../css/Header.css';
 
 // Creating the Header component
-const Header = () => {
+const Header = ({ title }) => {
     return (
         <div className='header'>
-            <Link className='title' to="/">Quiz Game</Link>
+            <Link className='title' to="/">{title}</Link>
             <hr className='divider' />
         </div>
     )
