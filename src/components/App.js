@@ -29,9 +29,9 @@ const App = () => {
             <div className="container" style={{backgroundImage: "url(./ques1.png"}}> 
                 <Header title="Quiz Game" />
                 <Routes>
-                    <Route path="/" exact element={<HomePage name={name} setName={setName} fetchQuestions={fetchQuestions} />} />
-                    <Route path="/quiz" exact element={<QuizPage name={name} questions={questions} score={score} setScore={setScore} setQuestions={setQuestions} />} />
-                    <Route path="/result" exact element={<ResultPage score={score} name={name} />} />
+                    <Route path="/quiz-game/" exact element={<HomePage name={name} setName={setName} fetchQuestions={fetchQuestions} />} />
+                    <Route path="/quiz-game/quiz" exact element={<QuizPage name={name} questions={questions} score={score} setScore={setScore} setQuestions={setQuestions} />} />
+                    <Route path="/quiz-game/result" exact element={<ResultPage score={score} name={name} />} />
                 </Routes>
             </div>
             <Footer />

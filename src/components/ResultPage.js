@@ -12,14 +12,14 @@ const ResultPage = ({ name, score }) => {
     
     useEffect(() => {
         if(!name){
-            history('/')
+            history('/quiz-game')
         }
     }, [name, history])
 
     return (
         <div className='result'>
             <span className="title">Final Score: {score}</span>
-            <Button variant='contained' color='secondary' size='large' style={{ alignSelf: "center", marginTop: 20}} href="/">Go to Home Page</Button>
+            <Button variant='contained' color='secondary' size='large' style={{ alignSelf: "center", marginTop: 20}} href="/quiz-game">Go to Home Page</Button>
         </div>
     )
 };
