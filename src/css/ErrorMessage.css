@@ -1,0 +1,12 @@
+.error_message {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: rgba(235, 27, 27, 0.743);
+    border: 3px solid red;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bold;
+}
