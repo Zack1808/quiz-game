@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import axios from 'axios';
 
 // Importing the costume made components
@@ -25,7 +25,7 @@ const App = () => {
     }
 
     return(
-        <BrowserRouter>
+        <HashRouter>
             <div className="container" style={{backgroundImage: "url(./ques1.png"}}> 
                 <Header title="Quiz Game" />
                 <Routes>
@@ -35,7 +35,7 @@ const App = () => {
                 </Routes>
             </div>
             <Footer />
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
