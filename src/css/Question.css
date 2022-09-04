@@ -47,6 +47,12 @@
     box-shadow: 0 0 1px #000;
 }
 
+.controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
 @media (max-width: 614px) {
     .singleOption {
         width: 100%;

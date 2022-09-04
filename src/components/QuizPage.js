@@ -15,7 +15,7 @@ const QuizPage = ({ name, score, questions, setQuestions, setScore}) => {
 
     useEffect(() => {
         setOptions(questions && handleSchuffle([questions[currentQuestion]?.correct_answer, ...questions[currentQuestion]?.incorrect_answers ]));
-    }, [questions]);
+    }, [questions, currentQuestion]);
 
     const handleSchuffle = (opt) => {
         return opt.sort(() => Math.random() - 0.5)
