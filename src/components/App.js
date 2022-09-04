@@ -31,7 +31,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" exact element={<HomePage name={name} setName={setName} fetchQuestions={fetchQuestions} />} />
                     <Route path="/quiz" exact element={<QuizPage name={name} questions={questions} score={score} setScore={setScore} setQuestions={setQuestions} />} />
-                    <Route path="/result" exact element={<ResultPage />} />
+                    <Route path="/result" exact element={<ResultPage score={score} name={name} />} />
                 </Routes>
             </div>
             <Footer />

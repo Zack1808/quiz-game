@@ -7,7 +7,7 @@ import '../css/Question.css'
 import { Button } from '@mui/material';
 
 // Creating the Questions component
-const Question = ({ currQues, setCurrQues, questions, options, correct, setScore, score, setQuestions}) => {
+const Question = ({ currQues, setCurrQues, questions, options, correct, setScore, score}) => {
 
     const [selected, setSelected] = useState();
     const [err, setErr] = useState(false);
@@ -34,8 +34,6 @@ const Question = ({ currQues, setCurrQues, questions, options, correct, setScore
         else(setErr(true))
     }
 
-    const handleQuit = () => {}
-
     return (
         <div className='question'>
             <h1>Question {currQues + 1}</h1>
@@ -51,7 +49,7 @@ const Question = ({ currQues, setCurrQues, questions, options, correct, setScore
                     }
                 </div>
                 <div className="controls">
-                    <Button variant='contained' size='large' color='secondary' style={{width: 185}} href="/" onClick={handleQuit}>Quit</Button>
+                    <Button variant='contained' size='large' color='secondary' style={{width: 185}} href="/">Quit</Button>
                     <Button variant='contained' size='large' color='primary' style={{width: 185}} onClick={handleNext}>Next Question</Button>
                 </div>
             </div>

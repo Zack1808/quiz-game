@@ -33,7 +33,7 @@ const QuizPage = ({ name, score, questions, setQuestions, setScore}) => {
                         <span>{questions[currentQuestion].category}</span>
                         <span>Score: {score}</span>
                     </div>
-                    <Question currQues={currentQuestion} setCurrQues={setCurrentQuestion} questions={questions} options={options} correct={questions[currentQuestion]?.correct_answer} score={score} setScore={setScore} setQuestions={setQuestions} /> 
+                    <Question currQues={currentQuestion} setCurrQues={setCurrentQuestion} questions={questions} options={options} correct={questions[currentQuestion]?.correct_answer} score={score} setScore={setScore} /> 
                 </>
                 ) : (
                     <CircularProgress color='inherit' size={150} thickness={1} style={{ margin: 100}} />
