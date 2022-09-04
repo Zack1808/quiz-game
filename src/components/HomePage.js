@@ -39,15 +39,15 @@ const HomePage = ({ name, setName, fetchQuestions }) => {
                 <span>Quiz Settings</span>
                 <div className="settings_select">
                     {err && <ErrorMessage> Please fill all the fields </ErrorMessage>}
-                    <TextField label="Enter your name" variant='outlined' className='field' onChange={(e) => setName(e.target.value)} />
-                    <TextField select label="Select Category" variant='outlined' className='field' onChange={(e) => setCategory(e.target.value)} value={category}>
+                    <TextField label="Enter your name" variant='outlined' onChange={(e) => setName(e.target.value)} style={{marginBottom: 25}} />
+                    <TextField select label="Select Category" variant='outlined' onChange={(e) => setCategory(e.target.value)} value={category} style={{marginBottom: 30}}>
                         {
                             Categories.map(ctg => {
                                 return <MenuItem key={ctg.category} value={ctg.value}>{ctg.category}</MenuItem>
                             })
                         }
                     </TextField>
-                    <TextField select label="Select Difficulty" variant='outlined' className='field' onChange={(e) => setDifficulty(e.target.value)} value={difficulty}>
+                    <TextField select label="Select Difficulty" variant='outlined' onChange={(e) => setDifficulty(e.target.value)} value={difficulty} style={{marginBottom: 30}}>
                         <MenuItem key="Easy" value="easy">Easy</MenuItem>
                         <MenuItem key="Medium" value="medium">Medium</MenuItem>
                         <MenuItem key="Hard" value="hard">Hard</MenuItem>
