@@ -25,7 +25,7 @@ const App = () => {
     }
 
     return(
-        <HashRouter>
+        <HashRouter basename={`/${process.env.PUBLIC_URL}`}>
             <div className="container" style={{backgroundImage: "url(./ques1.png"}}> 
                 <Header title="Quiz Game" />
                 <Routes>
