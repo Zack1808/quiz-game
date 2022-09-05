@@ -8,7 +8,7 @@ import '../css/Header.css';
 const Header = ({ title }) => {
     return (
         <div className='header'>
-            <Link className='title' to="/quiz-game">{title}</Link>
+            <Link className='title' to="/">{title}</Link>
             <hr className='divider' />
         </div>
     )

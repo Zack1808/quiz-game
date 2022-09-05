@@ -29,7 +29,7 @@ const HomePage = ({ name, setName, fetchQuestions }) => {
         else {
             setErr(false);
             fetchQuestions(category, difficulty);
-            history("/quiz-game/quiz")
+            history("/quiz")
         }
     }
 

@@ -29,7 +29,7 @@ const Question = ({ currQues, setCurrQues, questions, options, correct, setScore
     }
 
     const handleNext = () => {
-        if(currQues > 8) history('/quiz-game/result');
+        if(currQues > 8) history('/result');
         else if(selected) {setCurrQues(currQues + 1); setSelected();}
         else(setErr(true))
     }
@@ -49,7 +49,7 @@ const Question = ({ currQues, setCurrQues, questions, options, correct, setScore
                     }
                 </div>
                 <div className="controls">
-                    <Button variant='contained' size='large' color='secondary' style={{width: 185}} href="/quiz-game">Quit</Button>
+                    <Button variant='contained' size='large' color='secondary' style={{width: 185}} href="/quiz-game/">Quit</Button>
                     <Button variant='contained' size='large' color='primary' style={{width: 185}} onClick={handleNext}>Next Question</Button>
                 </div>
             </div>
