@@ -2,6 +2,9 @@ import { Button, MenuItem, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
+// Imoprting the helper functions
+import { handleSubmit } from '../helpers/handleFunctions';
+
 // Importing the Categories list
 import { Categories } from '../data/Categories';
 
@@ -13,25 +16,13 @@ import ErrorMessage from './ErrorMessage';
 import '../css/HomePage.css';
 
 // Creating the Homepage component
-const HomePage = ({ name, setName, fetchQuestions }) => {
+const HomePage = ({ name, setName, setQuestions }) => {
 
     const [category, setCategory] = useState("");
     const [difficulty, setDifficulty] = useState("");
     const [err, setErr] = useState(false);
     
     const history = useNavigate()
-
-    const handleSubmit = () => {
-        if(!category||!difficulty||!name) {
-            setErr(true);
-            return
-        }
-        else {
-            setErr(false);
-            fetchQuestions(category, difficulty);
-            history("/quiz")
-        }
-    }
 
     return (
         <div className='content'>
@@ -52,7 +43,7 @@ const HomePage = ({ name, setName, fetchQuestions }) => {
                         <MenuItem key="Medium" value="medium">Medium</MenuItem>
                         <MenuItem key="Hard" value="hard">Hard</MenuItem>
                     </TextField>
-                    <Button variant='contained' color='success' size="large" onClick={handleSubmit}>
+                    <Button variant='contained' color='success' size="large" onClick={() => {handleSubmit(category, difficulty, name, setErr, history, setQuestions)}}>
                         Start Quiz
                     </Button>
                 </div>

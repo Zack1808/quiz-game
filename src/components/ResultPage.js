@@ -10,6 +10,7 @@ const ResultPage = ({ name, score }) => {
 
     const history = useNavigate();
     
+    // Returns the user to the home page if no name was entered in the field 
     useEffect(() => {
         if(!name){
             history('/quiz-game/')
