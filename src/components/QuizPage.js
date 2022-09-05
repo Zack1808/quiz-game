@@ -18,7 +18,14 @@ const QuizPage = ({ name, score, questions, setQuestions, setScore}) => {
     }, [questions, currentQuestion]);
 
     const handleSchuffle = (opt) => {
-        return opt.sort(() => Math.random() - 0.5)
+        const answers = opt.map(answer => decodeHtmlCharCodes(answer))
+        answers.sort(() => Math.random() - 0.5);
+        console.log(opt)
+        return answers;
+    }
+
+    const decodeHtmlCharCodes = (str) => {
+        return str.replace(/(&#(\d+);)/g, (match, capture, charCode) => String.fromCharCode(charCode)).replace(/&quot;/g, '"');
     }
 
     return (
@@ -33,7 +40,7 @@ const QuizPage = ({ name, score, questions, setQuestions, setScore}) => {
                         <span>{questions[currentQuestion].category}</span>
                         <span>Score: {score}</span>
                     </div>
-                    <Question currQues={currentQuestion} setCurrQues={setCurrentQuestion} questions={questions} options={options} correct={questions[currentQuestion]?.correct_answer} score={score} setScore={setScore} /> 
+                    <Question currQues={currentQuestion} setCurrQues={setCurrentQuestion} questions={questions} options={options} correct={decodeHtmlCharCodes(questions[currentQuestion]?.correct_answer)} score={score} setScore={setScore} decode={decodeHtmlCharCodes} /> 
                 </>
                 ) : (
                     <CircularProgress color='inherit' size={150} thickness={1} style={{ margin: 100}} />

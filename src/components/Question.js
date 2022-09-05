@@ -7,7 +7,7 @@ import '../css/Question.css'
 import { Button } from '@mui/material';
 
 // Creating the Questions component
-const Question = ({ currQues, setCurrQues, questions, options, correct, setScore, score}) => {
+const Question = ({ currQues, setCurrQues, questions, options, correct, setScore, score, decode}) => {
 
     const [selected, setSelected] = useState();
     const [err, setErr] = useState(false);
@@ -38,7 +38,7 @@ const Question = ({ currQues, setCurrQues, questions, options, correct, setScore
         <div className='question'>
             <h1>Question {currQues + 1}</h1>
             <div className="singleQuestion">
-                <h2>{ questions[currQues].question }</h2>
+                <h2>{ decode(questions[currQues].question) }</h2>
                 <div className="options">
                     {err && <ErrorMessage>Please select an option</ErrorMessage>}
                     {
