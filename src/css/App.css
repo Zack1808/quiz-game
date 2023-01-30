@@ -1,8 +1,10 @@
+/* Default config start */
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap");
 
 :root {
   --dark: rgba(49, 49, 49);
+  --containers: rgb(80, 80, 80);
   --light: #eee;
 }
 
@@ -13,13 +15,19 @@
   font-family: "Rubik", sans-serif;
   /* outline: 1px solid lime !important; */
 }
+/* Default config end */
+/* App styling start */
 
 .app-container {
   width: 100%;
   min-height: 100vh;
+  padding: 25px 10px;
   display: flex;
-  justify-content: center;
-  align-items: start;
+  gap: 70px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   background-color: var(--dark);
   color: var(--light);
 }
+/* App styling end */

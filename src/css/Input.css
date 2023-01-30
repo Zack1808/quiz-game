@@ -1,0 +1,38 @@
+/* Input component styling start */
+.input-container {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  border-bottom: 5px solid var(--light);
+  background-color: var(--containers);
+  padding-inline: 10px;
+  border-radius: 5px;
+}
+
+.input input {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: var(--light);
+}
+
+.input input:focus {
+  outline: none;
+}
+
+.input:focus-within {
+  outline: 1px solid var(--light);
+}
+/* Input component styling end */
