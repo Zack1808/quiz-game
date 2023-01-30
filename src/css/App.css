@@ -1,7 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap");
+
+:root {
+  --dark: rgba(49, 49, 49);
+  --light: #eee;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  /* outline: 1px solid lime !important; */
 }
 
 .app-container {
@@ -9,4 +19,7 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: start;
+  background-color: var(--dark);
+  color: var(--light);
 }
