@@ -1,0 +1,38 @@
+/* Select component styling start */
+.select-container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  border-bottom: 5px solid var(--light);
+  background-color: var(--containers);
+  padding-inline: 10px;
+  border-radius: 5px;
+}
+
+.select input {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: var(--light);
+  pointer-events: none;
+}
+
+.select input:focus {
+  pointer-events: none;
+}
+
+.select:focus-within {
+  outline: 1px solid var(--light);
+}
