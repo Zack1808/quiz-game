@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap");
 
 :root {
-  --dark: rgba(49, 49, 49);
+  --dark: rgb(49, 49, 49);
+  --darker: rgb(34, 34, 34);
   --containers: rgb(80, 80, 80);
   --light: #eee;
 }

@@ -8,7 +8,7 @@ import Select from "../Select";
 import "../../css/HomePage.css";
 
 // Importing variables
-import { Categories } from "../../data/Categories";
+import { Categories, Difficullty } from "../../data/Categories";
 
 // Creating the HomePage component
 const HomePage = () => {
@@ -16,6 +16,7 @@ const HomePage = () => {
     <div className="home-container">
       <Input label="Player Name" />
       <Select label="Select category" items={Categories} />
+      <Select label="Select difficulty" items={Difficullty} />
     </div>
   );
 };
