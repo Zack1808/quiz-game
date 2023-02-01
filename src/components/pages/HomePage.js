@@ -13,7 +13,7 @@ import "../../css/HomePage.css";
 import { Categories, Difficullty } from "../../data/Categories";
 
 // Creating the HomePage component
-const HomePage = () => {
+const HomePage = ({ handleSubmit }) => {
   // Creating the references
   const nameRef = useRef(null);
   const categoryRef = useRef(null);
@@ -26,6 +26,15 @@ const HomePage = () => {
       difficultyRef.current.value === "Choose a category"
     )
       e.preventDefault();
+    else {
+      const category = Categories.find(
+        (ctg) => ctg.category === categoryRef.current.value
+      );
+      const difficulty = Difficullty.find(
+        (level) => level.category === difficultyRef.current.value
+      );
+      handleSubmit(nameRef.current.value, category.value, difficulty.value);
+    }
   };
 
   return (
