@@ -31,9 +31,9 @@ const HomePage = () => {
   return (
     <div className="home-container">
       <Input label="Player Name" ref={nameRef} />
-      <Select label="Select category" items={Categories} ref={categoryRef} />
+      <Select label="Select category*" items={Categories} ref={categoryRef} />
       <Select
-        label="Select difficulty"
+        label="Select difficulty*"
         items={Difficullty}
         ref={difficultyRef}
       />

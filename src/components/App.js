@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Importing the costume made components
 import Navigation from "./Navigation";
 import HomePage from "./pages/HomePage";
+import Footer from "./Footer";
 
 // Importing the style file
 import "../css/App.css";
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
