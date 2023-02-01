@@ -5,3 +5,30 @@
   align-items: center;
   gap: 20px;
 }
+
+.home-container a {
+  margin-top: 30px;
+  background-color: var(--darker);
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.home-container a:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.home-container a:hover .hidden {
+  opacity: 1;
+}

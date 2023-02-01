@@ -35,7 +35,7 @@ const Select = forwardRef(({ items = [], label = "Label" }, ref) => {
         className="select"
         onClick={() => setToggle((prevState) => !prevState)}
       >
-        <input type="button" value={selectedCategory} />
+        <input type="button" value={selectedCategory} ref={ref} />
         <span className={toggle ? "rotated" : ""}>
           <UilAngleDown />
         </span>

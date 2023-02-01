@@ -35,4 +35,10 @@
 .input:focus-within {
   outline: 1px solid var(--light);
 }
+
+::placeholder {
+  font-weight: bold;
+  color: var(--light);
+  opacity: 0.7;
+}
 /* Input component styling end */
