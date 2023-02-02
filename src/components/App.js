@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Importing the costume made components
 import Navigation from "./Navigation";
 import HomePage from "./pages/HomePage";
+import QuizPage from "./pages/QuizPage";
 import Footer from "./Footer";
 
 // Importing the fetch function
@@ -20,6 +21,7 @@ const App = () => {
 
   // Function that will setup the game
   const gameStart = (name, category, difficulty) => {
+    if (name) setPlayerName(name);
     fetchQuestions(category, difficulty, setQuestions);
   };
 
@@ -33,6 +35,7 @@ const App = () => {
             path="/"
             element={<HomePage handleSubmit={gameStart} />}
           />
+          <Route exact path="/quiz" element={<QuizPage />} />
         </Routes>
         <Footer />
       </div>
