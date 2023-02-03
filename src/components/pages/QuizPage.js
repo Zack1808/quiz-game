@@ -22,7 +22,8 @@ const QuizPage = ({ questions, player }) => {
     setStep((prevState) => prevState + 1);
   };
 
-  if (!questions) return null;
+  if (!questions.length) return;
+
   return (
     <div className="quiz-container">
       <header>
