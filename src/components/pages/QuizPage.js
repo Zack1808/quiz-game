@@ -13,7 +13,7 @@ import "../../css/QuizPage.css";
 import { Steps } from "../../data/Steps";
 
 // Creating the QuizPage component
-const QuizPage = ({ questions, player }) => {
+const QuizPage = ({ questions, player, setEmpty }) => {
   // Setting up state
   const [step, setStep] = useState(0);
   const [guesses, setGuesses] = useState([]);
@@ -36,6 +36,7 @@ const QuizPage = ({ questions, player }) => {
           handleClick={handleSelection}
           question={questions[step]}
           setAnswer={setGuesses}
+          setEmpty={setEmpty}
         />
       ) : (
         <Result
@@ -43,6 +44,7 @@ const QuizPage = ({ questions, player }) => {
           result={guesses}
           difficulty={questions[0].difficulty.toUpperCase()}
           name={player}
+          setEmpty={setEmpty}
         />
       )}
     </div>

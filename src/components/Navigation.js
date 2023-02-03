@@ -5,10 +5,15 @@ import { Link } from "react-router-dom";
 import "../css/Navigation.css";
 
 // Creating the Navigation component
-const Navigation = () => {
+const Navigation = ({ setEmpty }) => {
   return (
     <header>
-      <Link to="/">
+      <Link
+        to="/"
+        onClick={() => {
+          setEmpty([]);
+        }}
+      >
         <h1>Quiz me</h1>
       </Link>
       <small>Let's see how much you know</small>

@@ -28,7 +28,7 @@ const App = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="app-container">
-        <Navigation />
+        <Navigation setEmpty={setQuestions} />
         <Routes>
           <Route
             exact
@@ -38,7 +38,13 @@ const App = () => {
           <Route
             exact
             path="/quiz"
-            element={<QuizPage questions={questions} player={playerName} />}
+            element={
+              <QuizPage
+                questions={questions}
+                player={playerName}
+                setEmpty={setQuestions}
+              />
+            }
           />
         </Routes>
         <Footer />

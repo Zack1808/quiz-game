@@ -14,7 +14,7 @@ import { decoder } from "../helpers/decoder";
 import { handleSchuffle, handleSelect } from "../helpers/handleFunctions";
 
 // Creating the Questions component
-const Question = ({ handleClick, question, setAnswer }) => {
+const Question = ({ handleClick, question, setAnswer, setEmpty }) => {
   // Creating state to check if a selection has been made
   const [selected, setSelected] = useState("");
   const [options, setOptions] = useState([]);
@@ -67,7 +67,7 @@ const Question = ({ handleClick, question, setAnswer }) => {
         ))}
       </div>
       <div className="question-buttons">
-        <Link to="/" className="btn">
+        <Link to="/" className="btn" onClick={() => setEmpty([])}>
           <UilQuestion className="hidden" />
           <span>
             <UilPower /> Quit

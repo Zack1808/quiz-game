@@ -6,7 +6,13 @@ import { UilQuestion } from "@iconscout/react-unicons";
 import "../css/Result.css";
 
 // Creating the Result component
-const Result = ({ category = "", name = "", result = [], difficulty = "" }) => {
+const Result = ({
+  category = "",
+  name = "",
+  result = [],
+  difficulty = "",
+  setEmpty,
+}) => {
   return (
     <div className="result-container">
       <h2>Result</h2>
@@ -26,7 +32,7 @@ const Result = ({ category = "", name = "", result = [], difficulty = "" }) => {
         </p>
         <hr />
       </div>
-      <Link to="/">
+      <Link to="/" onClick={() => setEmpty([])}>
         <UilQuestion className="hidden" />
         Return to Start
         <UilQuestion className="hidden" />
