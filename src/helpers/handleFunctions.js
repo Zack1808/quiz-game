@@ -11,43 +11,6 @@ export const handleSelect = (option, sel, corr) => {
   else if (option === corr) return "correct";
 };
 
-// Function that handles what happens when the button is pressed
-export const handleCheck = (
-  option,
-  setSelected,
-  setScore,
-  setErr,
-  score,
-  corr
-) => {
-  setSelected(option);
-
-  // Checks if the selected option is corret, and if so, increases the score by one
-  if (option === corr) setScore(score + 1);
-  setErr(false);
-};
-
-// Function that handles the event of pressing the button to get to the next question
-export const handleNext = (
-  currQues,
-  selected,
-  setCurrQues,
-  setSelected,
-  setErr,
-  history
-) => {
-  // Checks if the the current Question index is greater than 8 (if the 10th question was answered) and if yes, will forward the user to the reult page
-  if (currQues > 8) history("/result");
-  // Checks if an option was selected, and if yes, proceeds to the next question and removes the currently selected option
-  else if (selected) {
-    setCurrQues(currQues + 1);
-    setSelected();
-  }
-
-  // Throws error if no option was selected
-  else setErr(true);
-};
-
 // Funciton that will shuffle the answers to the questions in an random order
 export const handleSchuffle = (options) => {
   // Decoding all special encoded signs

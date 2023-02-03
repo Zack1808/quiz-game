@@ -1,12 +1,19 @@
 .stepper-container {
   display: grid;
-  grid-template-columns: repeat(19, 5%);
+  grid-template-columns: repeat(19, 1fr);
   width: 100%;
   justify-content: center;
   align-items: center;
 }
 
 .stepper-container hr {
+  width: 100%;
+}
+
+.stepper-container hr {
+  border: none;
+  background-color: var(--light);
+  height: 1px;
   width: 100%;
 }
 
@@ -20,8 +27,8 @@
 .step span {
   border: 2px solid var(--light);
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -37,7 +44,7 @@
 
 @media (max-width: 900px) {
   .stepper-container {
-    grid-template-columns: repeat(9, 10%);
+    grid-template-columns: repeat(9, 1fr);
     grid-row-gap: 20px;
   }
 

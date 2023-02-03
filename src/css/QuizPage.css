@@ -2,7 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 60px;
   width: 90%;
   flex-direction: column;
+}
+
+.quiz-container header {
+  width: 100%;
+  max-width: 500px;
+  align-self: start;
+  display: flex;
+  flex-direction: row;
+}
+
+.quiz-container header h3 {
+  display: flex;
+  gap: 10px;
 }

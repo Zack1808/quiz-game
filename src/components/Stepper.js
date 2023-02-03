@@ -19,8 +19,8 @@ const Stepper = ({ step = 0, steps = [], guess = [] }) => {
         <React.Fragment key={stp.id}>
           {stp.id > 1 && <hr className={stp.id === 6 ? "line-hidden" : ""} />}
           <div className="step">
-            <span className={step >= stp.id ? "active" : ""}>
-              {step <= stp.id ? stp.id : renderIcon(stp, steps, guess)}
+            <span className={step + 1 >= stp.id ? "active" : ""}>
+              {step + 1 <= stp.id ? stp.id : renderIcon(stp, steps, guess)}
             </span>
             <small>{stp.name}</small>
           </div>

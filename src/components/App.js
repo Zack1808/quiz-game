@@ -35,7 +35,11 @@ const App = () => {
             path="/"
             element={<HomePage handleSubmit={gameStart} />}
           />
-          <Route exact path="/quiz" element={<QuizPage />} />
+          <Route
+            exact
+            path="/quiz"
+            element={<QuizPage questions={questions} />}
+          />
         </Routes>
         <Footer />
       </div>

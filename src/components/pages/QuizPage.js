@@ -1,43 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Importing the costume made component
 import Stepper from "../Stepper";
+import Question from "../Question";
 
 // Importing the style file
 import "../../css/QuizPage.css";
 
-// Creating the QuizPage component
-const QuizPage = () => {
-  // Creating list of items in stepper
-  const steps = [
-    { name: "Qn1", id: 1 },
-    { name: "Qn2", id: 2 },
-    { name: "Qn3", id: 3 },
-    { name: "Qn4", id: 4 },
-    { name: "Qn5", id: 5 },
-    { name: "Qn6", id: 6 },
-    { name: "Qn7", id: 7 },
-    { name: "Qn8", id: 8 },
-    { name: "Qn9", id: 9 },
-    { name: "Qn10", id: 10 },
-  ];
+// Importing variables
+import { Steps } from "../../data/Steps";
 
-  const results = [
-    false,
-    true,
-    true,
-    false,
-    false,
-    false,
-    false,
-    true,
-    true,
-    false,
-  ];
+// Creating the QuizPage component
+const QuizPage = ({ questions }) => {
+  // Setting up state
+  const [step, setStep] = useState(0);
+  const [guesses, setGuesses] = useState([]);
+
+  // Function that will go to the next question
+  const handleSelection = () => {
+    setStep((prevState) => prevState + 1);
+  };
+
+  if (!questions.length) return;
 
   return (
     <div className="quiz-container">
-      <Stepper steps={steps} guess={results} step={1} />
+      <header>
+        <h3>
+          Category: <span>{questions[0].category}</span>
+        </h3>
+      </header>
+      <Stepper steps={Steps} guess={guesses} step={step} />
+      {step <= 9 ? (
+        <Question
+          handleClick={handleSelection}
+          question={questions[step]}
+          setAnswer={setGuesses}
+        />
+      ) : null}
     </div>
   );
 };
