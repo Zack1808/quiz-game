@@ -7,6 +7,7 @@
   --darker: rgb(34, 34, 34);
   --containers: rgb(80, 80, 80);
   --light: #eee;
+  --lighter: #fff;
   --wrong: #a90000;
   --correct: #014f01;
 }

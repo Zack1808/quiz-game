@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Stepper from "../Stepper";
 import Question from "../Question";
 import Result from "../Result";
+import Loader from "../Loader";
 
 // Importing the style file
 import "../../css/QuizPage.css";
@@ -22,7 +23,7 @@ const QuizPage = ({ questions, player }) => {
     setStep((prevState) => prevState + 1);
   };
 
-  if (!questions.length) return;
+  if (!questions.length) return <Loader />;
 
   return (
     <div className="quiz-container">
@@ -40,6 +41,7 @@ const QuizPage = ({ questions, player }) => {
         <Result
           category={questions[0].category}
           result={guesses}
+          difficulty={questions[0].difficulty.toUpperCase()}
           name={player}
         />
       )}

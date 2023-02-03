@@ -6,7 +6,7 @@ import { UilQuestion } from "@iconscout/react-unicons";
 import "../css/Result.css";
 
 // Creating the Result component
-const Result = ({ category = "", name = "", result = [true] }) => {
+const Result = ({ category = "", name = "", result = [], difficulty = "" }) => {
   return (
     <div className="result-container">
       <h2>Result</h2>
@@ -16,6 +16,9 @@ const Result = ({ category = "", name = "", result = [true] }) => {
         <hr />
         <h3>Category:</h3>
         <p>{category}</p>
+        <hr />
+        <h3>Difficulty:</h3>
+        <p>{difficulty}</p>
         <hr />
         <h3>Result:</h3>
         <p>
