@@ -38,7 +38,7 @@ const App = () => {
           <Route
             exact
             path="/quiz"
-            element={<QuizPage questions={questions} />}
+            element={<QuizPage questions={questions} player={playerName} />}
           />
         </Routes>
         <Footer />
