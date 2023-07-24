@@ -25,7 +25,7 @@ The app uses [axios](https://axios-http.com/docs/intro) to get the questions fro
 
 You can try out the Quiz Game by visiting the [live demo](https://zack1808.github.io/quiz-game/).
 
-## How to run the app
+## How to run the app locally
 
 If you want to run the app localy:
 
