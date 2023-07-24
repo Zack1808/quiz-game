@@ -1,24 +1,95 @@
 # Quiz Game App
 
-## About the app
+<p align="center">
+    <img src="./public/quiz_game_preview.png" rel="Preview of the Quiz Game App" />
+</p>
 
-This is a simple quiz game app that uses the [Open Trivia DB](https://opentdb.com/api_config.php). After entering all the requested information on the home page, an fetch request is being made to the Trivia DB to get 10 questions. 
-To make the fetch request, [axios](https://axios-http.com/docs/intro) is being used.
-Also, for some components the [Material UI](https://mui.com) tool has been used.
-The app is mobile compatible (responsive).
-The app was published at [github pages](https://zack1808.github.io/quiz-game/).
+## Description
+
+A simple and interactive quiz game app that allows the user to test their knowledge on various topics by answering a series of multiple choice questions.
+The app uses [axios](https://axios-http.com/docs/intro) to get the questions from the [Open Trivia DB](https://opentdb.com/api_config.php) database.The game aims to be engaging and fun while providing valuable learning opportunities.
+
+## Features
+
+- Multiple topics: the game covers a wide range of topics, making it suitable for different interests and knowledge levels
+- Multiple choice: each question is presented in a multiple-choice format, providing four options to choose from
+- Difficulty selection: the game allows the user to choose the difficulty of questions he wants to face, giving the opportunity for those who want to learn and providing some challange for those who are up for it
+- Score tracking: keeps track of the users score and displays it after the game. During the game the user can see which questions he answered correctly, and which not
+- Randomized questions
 
 ## How to run the app
 
 You can find the app up and running at [https://zack1808.github.io/quiz-game/](https://zack1808.github.io/quiz-game/).
 
-If you want to run the app localy, you can clone the repository. 
-After cloning and entering the repository, run the command:
+If you want to run the app localy:
 
-### `npm install`
+#### 1. Clone the repository
 
-After the exectuion of the command is completed, run the followig command:
+- HTTPS: `git clone https://github.com/Zack1808/quiz-game.git`
+- SSH: `git clone git@github.com:Zack1808/quiz-game.git`
+- GitHub CLI: `gh repo clone Zack1808/quiz-game`
 
-### `npm start`
+#### 2. Enter the project directory
 
-After execution, the localhost server will startup and a browser window will open, previewing the quiz game app.
+`cd quiz-game`
+
+#### 3. Allow the app to install the necessary packages (Node.js has to be installed on the device)
+
+`npm install`
+
+#### 4. Start the app
+
+`npm start`
+
+After execution, the localhost server will startup and a browser window will open, previewing the calculator app.
+
+## Topics
+
+The Quiz Game has the following topics:
+
+- Genral Knowledge
+- Books
+- Films
+- Music
+- Musicals and Theaters
+- Television
+- Video Games
+- Board Games
+- Science and Nature
+- Computer
+- Mathematics
+- Mythology
+- Sports
+- Geography
+- History
+- Politics
+- Art
+- Celebrities
+- Animals
+- Vehicles
+- Comics
+- Gadgets
+- Japaniese Anime
+
+## Difficulty settings
+
+The game also has 3 difficulty settings:
+
+- Easy
+- Normal
+- Hard
+
+## Contribution
+
+Contributions to the Quiz Game project are welcome. If you want improve the user interface, or fix any issues, feel free to create a pull request. Make sure to follow the project's coding conventions and provide detailed information about your changes.
+
+## Contact
+
+If you have any questions or suggestions, you can reach me via:
+
+- Mail: jeanpierrenovak23@gmail.com
+- My portfolio: [jeanpierrenovak.netlify.app](https://jeanpierrenovak.netlify.app)
+
+---
+
+Have fun and enjoy expanding your knowledge with the Quiz Game!
