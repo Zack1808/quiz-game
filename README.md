@@ -14,7 +14,7 @@ The app uses [axios](https://axios-http.com/docs/intro) to get the questions fro
 - Multiple topics: the game covers a wide range of topics, making it suitable for different interests and knowledge levels
 - Multiple choice: each question is presented in a multiple-choice format, providing four options to choose from
 - Difficulty selection: the game allows the user to choose the difficulty of questions he wants to face, giving the opportunity for those who want to learn and providing some challange for those who are up for it
-- Score tracking: keeps track of the users score and displays it after the game. During the game the user can see which questions he answered correctly, and which not
+- Score tracking: keeps track of the users score and displays it after the game. During the game the user can see which questions were answered correctly, and which not
 - Randomized questions
 
 ## How to run the app
