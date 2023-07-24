@@ -3,6 +3,9 @@
 <p align="center">
     <img src="./public/quiz_game_preview.png" rel="Preview of the Quiz Game App" />
 </p>
+<p align="center">
+    <img src="./public/quiz_game_preview_2.png" rel="Preview of the Quiz Game App: Quiz" />
+</p>
 
 ## Description
 
@@ -15,11 +18,14 @@ The app uses [axios](https://axios-http.com/docs/intro) to get the questions fro
 - Multiple choice: each question is presented in a multiple-choice format, providing four options to choose from
 - Difficulty selection: the game allows the user to choose the difficulty of questions he wants to face, giving the opportunity for those who want to learn and providing some challange for those who are up for it
 - Score tracking: keeps track of the users score and displays it after the game. During the game the user can see which questions were answered correctly, and which not
-- Randomized questions
+- Randomized questions: the app draws 10 random questions from a pool of questions, so that each round is different
+- Responsive design for seamless gameplay on different devices.
+
+## Live demo
+
+You can try out the Quiz Game by visiting the [live demo](https://zack1808.github.io/quiz-game/).
 
 ## How to run the app
-
-You can find the app up and running at [https://zack1808.github.io/quiz-game/](https://zack1808.github.io/quiz-game/).
 
 If you want to run the app localy:
 
