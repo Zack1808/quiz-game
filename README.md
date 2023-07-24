@@ -9,7 +9,7 @@
 
 ## Description
 
-A simple and interactive quiz game app that allows the user to test their knowledge on various topics by answering a series of multiple choice questions.
+A simple and interactive React based quiz game app that allows the user to test their knowledge on various topics by answering a series of multiple choice questions.
 The app uses [axios](https://axios-http.com/docs/intro) to get the questions from the [Open Trivia DB](https://opentdb.com/api_config.php) database.The game aims to be engaging and fun while providing valuable learning opportunities.
 
 ## Features
